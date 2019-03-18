@@ -3,8 +3,7 @@
 #### run `backend-service-demo`
 
 ```
-nohup java -Xms3072m -Xmx3072m -Xmn1536m -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
- -XX:+UseCMSInitiatingOccupancyOnly -jar backend-service-demo-0.0.1-SNAPSHOT.jar &
+java -Xms4g -Xmx4g -XX:+UseG1GC backend-service-demo/target/backend-service-demo.jar
 ```
 
 ### STEP 2
@@ -12,8 +11,7 @@ nohup java -Xms3072m -Xmx3072m -Xmn1536m -XX:+UseConcMarkSweepGC -XX:CMSInitiati
 #### run `gateway-demo`
 
 ```
-nohup java -Xms3072m -Xmx3072m -Xmn1536m -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
- -XX:+UseCMSInitiatingOccupancyOnly -jar gateway-demo-0.0.1-SNAPSHOT.jar &
+java -Xms4g -Xmx4g -XX:+UseG1GC backend-service-demo/target/gateway-demo.jar
 ```
 
 ### STEP 3
