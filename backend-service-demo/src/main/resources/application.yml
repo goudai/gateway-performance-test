@@ -1,2 +1,5 @@
 server:
   port: 8081
+  undertow:
+    io-threads: 4
+    worker-threads: 300

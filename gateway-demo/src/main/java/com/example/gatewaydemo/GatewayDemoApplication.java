@@ -16,9 +16,12 @@ public class GatewayDemoApplication {
     @Bean
     RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("", r -> r.path("/proxy/test/**")
-                        .filters(f -> f.stripPrefix(1))
-                        .uri("http://127.0.0.1:8081"))
+                .route("",
+                        r -> {
+                    return r.path("/proxy/demo")
+                                    .filters(f -> f.stripPrefix(1))
+                                    .uri("http://127.0.0.1:8081");
+                        })
                 .build();
     }
 }
