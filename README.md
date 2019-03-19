@@ -9,7 +9,7 @@ mvn clean package -DskipTests
 #### run `backend-service-demo`
 
 ```
-java -Xms4g -Xmx4g -XX:+UseG1GC backend-service-demo/target/backend-service-demo.jar
+java  -Xms4g -Xmx4g -XX:+UseG1GC -jar backend-service-demo/target/backend-service-demo.jar
 ```
 
 ### STEP 4
@@ -17,7 +17,7 @@ java -Xms4g -Xmx4g -XX:+UseG1GC backend-service-demo/target/backend-service-demo
 #### run `gateway-demo`
 
 ```
-java -Xms4g -Xmx4g -XX:+UseG1GC backend-service-demo/target/gateway-demo.jar
+java -Xms4g -Xmx4g -XX:+UseG1GC -jar gateway-demo/target/gateway-demo.jar
 ```
 
 #### benchmark with `wrk`
